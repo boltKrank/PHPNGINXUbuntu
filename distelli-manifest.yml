@@ -1,9 +1,12 @@
-<username>/PHPNGINXUbuntu:
+bmcgehee/PHPNGINXUbuntu:
 
   PkgInclude:
     - configs/*
-    - webapp/*
     - webapp.php
+    - webapp/*
+
+  PkgExclude:
+    - README.md
 
   PreInstall:
     - echo "===Starting PreInstall==="
