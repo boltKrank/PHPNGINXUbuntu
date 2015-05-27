@@ -1,4 +1,4 @@
-bmcgehee/PHPNGINXUbuntu:
+<username>/PHPNGINXUbuntu:
 
   PkgInclude:
     - configs/*
@@ -35,12 +35,17 @@ bmcgehee/PHPNGINXUbuntu:
     - sudo ln -sf /$DISTELLI_APPHOME/webapp/ /usr/share/nginx/html/
     - sudo ln -sf /$DISTELLI_APPHOME/webapp.php /usr/share/nginx/html/
 
+    - echo "=====Done with PostInstall======"
+
+  Start:
+    - echo "=====Begin Start======"
+
     - echo "---restarting php---"
     - sudo service php5-fpm restart
 
     - echo "---restarting nginx---"
     - sudo service nginx restart
 
-    - echo "=====Done with PostInstall======"
+    - echo "=====Done with Start======"
 
 
