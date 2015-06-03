@@ -31,14 +31,14 @@
     - echo "---Updating /etc/nginx/sites-available/default---"
     - sudo cp $DISTELLI_INSTALLHOME/configs/default /etc/nginx/sites-available/default
 
-    - echo "---linking to content---"
-    - sudo ln -sf $DISTELLI_APPHOME/webapp/ /usr/share/nginx/html/
-    - sudo ln -sf $DISTELLI_APPHOME/webapp.php /usr/share/nginx/html/
-
     - echo "=====Done with PostInstall======"
 
   Start:
     - echo "=====Begin Start======"
+
+    - echo "---linking to content---"
+    - sudo ln -sf $DISTELLI_APPHOME/webapp/ /usr/share/nginx/html/
+    - sudo ln -sf $DISTELLI_APPHOME/webapp.php /usr/share/nginx/html/
 
     - echo "---restarting php---"
     - sudo service php5-fpm restart
